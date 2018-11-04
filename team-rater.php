@@ -13,24 +13,23 @@
 <link rel="stylesheet"  href="mystyle.css">
 
 <?php
-$servername = "localhost";
-$username = "Mursu";
-$password = "KkU0MFGKZqYUbbEf";
+// PHP Data Objects(PDO) Sample Code:
+try {
+    $conn = new PDO("sqlsrv:server = tcp:1500481.database.windows.net,1433; Database = 	teams", "Mursu", "UDzmPCF7");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
+// SQL Server Extension Sample Code:
+$connectionInfo = array("UID" => "Mursu@1500481", "pwd" => "UDzmPCF7", "Database" => "teams", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:1500481.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
 ?>
 
-<br>
-
 <?php 
-
 
 
 		// get the values entered in the form
@@ -40,19 +39,8 @@ if ($conn->connect_error) {
 		$hero4 = $_POST['selected-text-4'];
 		$hero5 = $_POST['selected-text-5'];
 		$hero6 = $_POST['selected-text-6'];
-		
-		
-		
 
 
-$link = mysqli_connect("localhost", "Mursu", "KkU0MFGKZqYUbbEf", "teams");
-
- 
-// Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
- 
  $sql = "INSERT INTO myteams (heroName) VALUES
 							('$hero1'),
 							('$hero2'),
@@ -61,16 +49,13 @@ if($link === false){
 							('$hero5'),
 							('$hero6')";
 							
-				if(mysqli_query($link, $sql)){
+				if(mysqli_query($conn, $sql)){
 					echo "Records added successfully.";
 				} else{
 					echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-					}		
-
+					}	
 
 ?>
-
-
 
 
 	<!-- IconSelect functionality -->
