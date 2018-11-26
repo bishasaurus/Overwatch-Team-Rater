@@ -1,0 +1,18 @@
+//Create the myteams-table for saved teams
+CREATE TABLE myTeams (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    heroName1 TEXT,
+    heroName2 TEXT,
+    heroName3 TEXT,
+    heroName4 TEXT,
+    heroName5 TEXT,
+    heroName6 TEXT
+);
+
+//Create the users-table for registered users
+CREATE TABLE users (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
