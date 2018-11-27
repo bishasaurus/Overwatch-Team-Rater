@@ -1,5 +1,5 @@
 //Create the myteams-table for saved teams
-CREATE TABLE myTeams (
+CREATE TABLE myteams (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     heroName1 TEXT,
     heroName2 TEXT,
