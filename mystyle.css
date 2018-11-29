@@ -48,8 +48,6 @@ body {
 }
 
 #main_text {
-	background-image: url("pics/blank_bg.png");
-	background-size: cover;
 	margin-left: 60px;
 	margin-top: 35px;
 	margin-bottom: 55px;
@@ -120,4 +118,9 @@ body {
 .header {
 	font-family: owFont;
 	font-style: italic;
+}
+
+tr.spaceUnder>td {
+  padding-bottom: 1em;
+  padding-right: 1em;
 }

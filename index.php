@@ -3,7 +3,10 @@
 
 
 <header>
-<script src="jquery-1.9.0.min.js" type="text/javascript"></script>
+
+<!--Links to various script and style resources-->
+
+<script src="jquery-1.9.0.min.js" type="text/javascript"></script> 
 <script src="jquery.dd.min.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="dd.css" />
 </header>
@@ -15,12 +18,17 @@
 
 <link rel="stylesheet"  href="mystyle.css">
 
+<!--Checks if user is using mobile browser, if they are, directs user to mobile version on home page-->
 <?php
 if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'android')) {
    header( 'Location: index-mobile.php' );
 }
 ?>
 
+<?php
+// Initialize the session
+session_start();
+?>
 
 
 	<!-- IconSelect functionality -->
@@ -33,8 +41,10 @@ if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolowe
 		
 		
 		
-        var iconSelect;
-
+        var iconSelect; 
+		
+		<!--The following function pics icons' values and enters them into the corresponding input fields. Those input fields' values will be sent to the team rater-->
+		
         window.onload = function(){
 			
 		    selectedText = document.getElementById('selected-text');
@@ -79,7 +89,7 @@ if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolowe
                selectedText6.value = iconSelect6.getSelectedValue();
 			   });
 			   
-		  
+		  <!--Determines the attributes of the six icon select drop down menus-->
 
             iconSelect = new IconSelect("my-icon-select", 
                 {'selectedIconWidth':120,
@@ -143,7 +153,7 @@ if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolowe
                 'horizontalIconNumber':2});
 		
 	
-			
+			<!--Determines the icon select drop down menus items, their pictures and values-->
 				
             var icons = [];
             icons.push({'iconFilePath':'pics/Icon-Ana.png', 'iconValue':'Ana'});
@@ -175,6 +185,8 @@ if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolowe
 			icons.push({'iconFilePath':'pics/Icon-Zarya.png', 'iconValue':'Zarya'});
 			icons.push({'iconFilePath':'pics/Icon-Zenyatta.png', 'iconValue':'Zenyatta'});
 			
+			<!--Refreshes the displayed picture on the icon select field after selection -->
+			
             iconSelect.refresh(icons);
 			iconSelect2.refresh(icons);
 			iconSelect3.refresh(icons);
@@ -194,49 +206,29 @@ if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolowe
 
 <body>
 
+<!--Element is taken from another file with include-function -->
 
-
-<div class="container" id="navigations">
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand mb-0" href="#">
-    <img src="pics/Overwatch_circle_logo.png" width="50" height="50" class="d-inline-block align-top" alt="">
-    <i>Overwatch Team Rater</i>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"><i>Home</i> <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i>Features</i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i>Pricing</i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i>Disabled</i></a>
-      </li>
-    </ul>
-  </div>
-</nav>
-</div>
+<?php include 'index-header.php';?>
 
 <br>
+
+<!-- -->
 
 <div class="container" id="main_content">
   <div class="row">
     <div class="col" id="main_text">
 	<br>
       <h1 style="font-style:italic; font-family: owFont;">Welcome</h1>
-    </div>
+	  <!--Element is taken from another file with include-function -->
+	  <?php include 'welcome-text.php';?>
+	</div>
     <div class="col" id="extra_content">
 	<br>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""
-	  <br>
-	  <br>
+	  <h1 style="font-style:italic; font-family: owFont;">How to use</h1>
+	  <!--Element is taken from another file with include-function -->
+	  <?php include 'howto-text.php';?>
+    <br>
+	<br>
    </div>
   </div>
 </div>
@@ -323,13 +315,27 @@ if(strstr(strtolower($_SERVER['HTTP_USER_AGENT']), 'mobile') || strstr(strtolowe
 	<div class="col" > 
 		</div>
 		<div class="col" > 
-			<input type="submit" id="assemble" style="font-style:italic; font-size:40px; color:white; border: none; border-color: transparent; padding: 15px; background-color: transparent;" value="Send input!">
+			<input type="submit" id="assemble" style="font-style:italic; font-size:40px; color:white; border: none; border-color: transparent; padding: 15px; background-color: transparent;" value="Rate team!">
 		</div>
 		<div class="col" > 
 		</div>
 	</div>
 </div>
 </form>
+
+<br>
+<div class="container">
+	<div class="row">
+		<div class="col" > 
+		</div>
+		<div class="col" > 
+		<!--Element is taken from another file with include-function -->
+			<?php include 'copyright.php';?>
+		</div>
+		<div class="col" > 
+		</div>
+	</div>
+</div>
 
 </body>
 

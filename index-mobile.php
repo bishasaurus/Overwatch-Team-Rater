@@ -1,4 +1,7 @@
 <html>
+
+<!--The scripts used here are exactly the same as in index.php, excluding the function that checks user's browser platform-->
+
 <header>
 <script src="jquery-1.9.0.min.js" type="text/javascript"></script>
 <script src="jquery.dd.min.js" type="text/javascript"></script>
@@ -12,6 +15,10 @@
 <link rel="stylesheet"  href="mystyle.css">
 
 
+<?php
+// Initialize the session
+session_start();
+?>
 
 	<!-- IconSelect functionality -->
         <link rel="stylesheet"  href="css/lib/control/iconselect.css" >
@@ -183,33 +190,7 @@
 
 
 
-<div class="container" id="navigations">
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <a class="navbar-brand mb-0" href="#">
-    <img src="pics/Overwatch_circle_logo.png" width="50" height="50" class="d-inline-block align-top" alt="">
-    <i>Overwatch Team Rater</i>
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"><i>Home</i> <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i>Features</i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i>Pricing</i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i>Disabled</i></a>
-      </li>
-    </ul>
-  </div>
-</nav>
-</div>
+<?php include 'index-header-mobile.php';?>
 
 <br>
 
@@ -218,12 +199,14 @@
     <div class="col" id="main_text">
 	<br>
       <h1 style="font-style:italic; font-family: owFont;">Welcome</h1>
-    </div>
+	  <?php include 'welcome-text.php';?>
+	</div>
     <div class="col" id="extra_content">
 	<br>
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""
-	  <br>
-	  <br>
+	  <h1 style="font-style:italic; font-family: owFont;">How to use</h1>
+	  <?php include 'howto-text.php';?>
+    <br>
+	<br>
    </div>
   </div>
 </div>
@@ -242,7 +225,7 @@
 	</div>
 </div>
 
-
+<form action="team-rater.php" method="post">
 <div class="container">
 	<div class="row">
 		<div class="col" >     
@@ -310,6 +293,20 @@
 		</div>
 		<div class="col" > 
 			<input type="submit" id="assemble" style="font-style:italic; font-size:40px; color:white; border: none; border-color: transparent; padding: 15px; background-color: transparent;" value="Send input!">
+		</div>
+		<div class="col" > 
+		</div>
+	</div>
+</div>
+</form>
+
+<br>
+<div class="container">
+	<div class="row">
+		<div class="col" > 
+		</div>
+		<div class="col" > 
+			<?php include 'copyright.php';?>
 		</div>
 		<div class="col" > 
 		</div>

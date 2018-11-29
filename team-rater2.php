@@ -12,11 +12,11 @@
 
 <link rel="stylesheet"  href="mystyle.css">
 
+<!--team-rater2.php is almost identical to team-rater.php, expect it doesn't have save function. Check team-rater.php's comments. -->
+
 
 
 <?php 
-
-//Function sends debug data do the browser's console
 
 function debug_to_console( $data ) {
 if ( is_array( $data ) )
@@ -27,7 +27,6 @@ echo $output;
 }
 
 
-		// Gets the values entered in the index.php's icon select form, consistin of six Hero names
 		$hero1 = $_POST['selected-text'];
 		$hero2 = $_POST['selected-text-2'];
 		$hero3 = $_POST['selected-text-3'];
@@ -37,7 +36,7 @@ echo $output;
 		
 		
 		
-//Creates and checks connection with the database
+
 
 $link = mysqli_connect("127.0.0.1:51099", "azure", "6#vWHD_$", "localdb");
 
@@ -50,24 +49,19 @@ if($link === false){
 
 ?>
 
-
 <?php
 // Initialize the session
 session_start();
 ?>
 
 
-	<!-- Style sheets -->
         <link rel="stylesheet"  href="css/lib/control/iconselect.css" >
         <script type="text/javascript" src="lib/control/iconselect.js"></script>
         
         <script type="text/javascript" src="lib/iscroll.js"></script>
- 
 		
 		
 		<script>
-		
-		<!-- The following function takes Heros' names that were send from the index.php, and adds values to team score total, depending which Heroes the user sent via the form -->
 		
 		$( document ).ready(function() {
 			
@@ -1034,7 +1028,7 @@ session_start();
 				defense++;
 			}
 			
-			<!--If the values go over the progress bar's max value, the value is set to the same value as corresponding bar's -->
+			console.log(tank);
 			
 			if (tank > 10) {
 				tank = 10;
@@ -1064,8 +1058,6 @@ session_start();
 				heal = 8;
 			}
 			
-			<!--Inserts the values into the corresponding progress bars -->
-			
 			document.getElementById("tankBar").value = tank;
 			document.getElementById("diveBar").value = dive;
 			document.getElementById("damageBar").value = damage;
@@ -1074,7 +1066,7 @@ session_start();
 			document.getElementById("defenseBar").value = defense;
 			document.getElementById("healBar").value = heal;
 			
-			<!--Prints a review of team's potential for each category. The bigger the certain value, the better review the team gets from the certain category -->
+			
 			
 			if (tank <= 1) {
 				document.getElementById("tankR").innerHTML = "- No tanking capability, heroes in team dies fastly to damage";
@@ -1211,8 +1203,6 @@ session_start();
 
 	<div class="row">
 		
-		<!--Hero names are printed as input field values via php print function -->
-		
 		<div class="col" > 
 			<div><input type="text" class="selected-text" id="selected-text-0" readonly="true" style="border: none; border-color: transparent; background-color: transparent; font-size:28px;" name="selected-text-0" value="<?php print "$hero1" ?>"></div>
 		</div>
@@ -1261,9 +1251,6 @@ session_start();
   <div class="row">
     <div class="col" id="main_text">
 	<br>
-	
-	<!-- The following php print functions are used to get the corresponding image to the Hero's name. Corresponding introduction text to the Hero's name is printed with file_get_contents function after the $myfilename has been determined -->
-	
       <h1 style="font-style:italic; font-family: owFont;">Team</h1>
 	  <br>
 	  <p> <img src="pics/Icon-<?php print "$hero1"; ?>.png"><br> <?php print "$hero1" ?> <?php $myfilename = "heroInfo/$hero1.txt";  print file_get_contents($myfilename); ?>  </p>
@@ -1318,32 +1305,18 @@ session_start();
   </div>
 </div>
 
-<div class="container" id="assemble" style="font-style:italic; font-size:40px;">
-	<div class="row">
-	<div class="col" > 
-		</div>
-		<div class="col" > 
-			<input type="submit" id="assemble" style="font-style:italic; font-size:40px; color:white; border: none; border-color: transparent; padding: 15px; background-color: transparent;" value="Save team!">
-		</div>
-		<div class="col" > 
-		</div>
-	</div>
-</div>
-</form>
-
 <br>
 <div class="container">
 	<div class="row">
 		<div class="col" > 
 		</div>
 		<div class="col" > 
-		<!--Prints the copyright info-->
 			<?php include 'copyright.php';?>
 		</div>
 		<div class="col" > 
 		</div>
 	</div>
 </div>
+
 </body>
 </html>
-
