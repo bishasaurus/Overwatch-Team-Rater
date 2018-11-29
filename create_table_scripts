@@ -1,12 +1,13 @@
-//Create the myteams-table for saved teams
-CREATE TABLE myteams (
+//Create the myteamsX-table for saved teams
+CREATE TABLE myteamsX (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     heroName1 TEXT,
     heroName2 TEXT,
     heroName3 TEXT,
     heroName4 TEXT,
     heroName5 TEXT,
-    heroName6 TEXT
+    heroName6 TEXT,
+    creator TEXT
 );
 
 //Create the users-table for registered users
