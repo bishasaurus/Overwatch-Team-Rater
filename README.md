@@ -17,6 +17,6 @@ Hope you can create good team compositions with Overwatch Team Rater!</p>
 
 <p>This is the Mircosoft Azure -version of Overwatch Team Rater, so after you've downloaded every file in your computer, you have to change the connection strings to match your database environment. For instructions in this, check <a href="https://www.w3schools.com/php/php_mysql_connect.asp">PHP Connect to MySQL</a> -tutorial.
   
-I'd recommend using <a href="https://www.apachefriends.org/download.html">XAMPP</a> for hosting this site locally. After you've downloaded Overwatch Team Rater folder, put it into xampp > htdocs. Then, after you've created a database to be used with the tables, create the tables mentioned in <a href="https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/create_table_scripts>create_table_scripts</a>-document using phpmyadmin (localhost/phpmyadmin).
+I'd recommend using <a href="https://www.apachefriends.org/download.html">XAMPP</a> for hosting this site locally. After you've downloaded Overwatch Team Rater folder, put it into xampp > htdocs. Then, after you've created a database to be used with the tables, create the tables mentioned in <a href="https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/create_table_scripts">create_table_scripts</a>-document using phpmyadmin (localhost/phpmyadmin).
   
 After these steps, you should be good to go!</p>
