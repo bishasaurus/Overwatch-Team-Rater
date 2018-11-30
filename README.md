@@ -11,9 +11,11 @@ Hope you can create good team compositions with Overwatch Team Rater!</p>
 
 <h2>How to use</h2>
 <p>1. Choose Heroes of your desire by clicking the images below. 
+  
 ![Hero selection](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_hero_select.PNG)
 
 2. After you've selected the Heroes you desire, rate the team's competence by pressing Rate Team! below the pictures.
+
 ![Rating page](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_rating.PNG)
 
 3. In the review page, you can save your team by scrolling down and pressing Save Team!
