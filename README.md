@@ -22,7 +22,7 @@ Hope you can create good team compositions with Overwatch Team Rater!</p>
 
 4. If you wish to delete saved teams, head to the Manage Teams -page and follow the instructions.</p>
 
-![Menu banner](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_banner.PNG)
+![Menu banner](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_banner2.PNG)
 
 
 
