@@ -46,8 +46,16 @@ To register, go to Sign up -page, enter the username and password of your wish, 
 
 ![Sign up page](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_register.PNG)
 
-You might get errors when creating a user, if your username is already taken or the password is too short, Come up with a new username and/or create a longer password, and try again.</p>
+You might get errors when creating a user, if your username is already taken or the password is too short, Come up with a new username and/or create a longer password, and try again.
 
+After you've created an account you can login in the Login-page. Just fill in your credentials and press Login.
+
+![Login page](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_prelogin.PNG)
+
+After you've logged in, you can change password and log out in the *Account name*'s Account -page.
+</p>
+
+![Account page](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_login.PNG)
 <h2>Deployment instructions</h2>
 
 <p>This is the Mircosoft Azure -version of Overwatch Team Rater, so after you've downloaded every file in your computer, you have to change the connection strings to match your database environment. For instructions in this, check <a href="https://www.w3schools.com/php/php_mysql_connect.asp">PHP Connect to MySQL</a> -tutorial.
