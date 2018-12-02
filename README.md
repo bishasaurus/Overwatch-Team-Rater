@@ -53,9 +53,13 @@ After you've created an account you can login in the Login-page. Just fill in yo
 ![Login page](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_prelogin.PNG)
 
 After you've logged in, you can change password and log out in the *Account name*'s Account -page.
-</p>
 
 ![Account page](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_login.PNG)
+
+By pressing the Reset Your Password -button, you can change your old password into a new one. Just fill in the new password twice into the input fields and press Submit.</p>
+
+![Password reset page](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_reset.PNG)
+
 <h2>Deployment instructions</h2>
 
 <p>This is the Mircosoft Azure -version of Overwatch Team Rater, so after you've downloaded every file in your computer, you have to change the connection strings to match your database environment. For instructions in this, check <a href="https://www.w3schools.com/php/php_mysql_connect.asp">PHP Connect to MySQL</a> -tutorial.
