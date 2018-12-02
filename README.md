@@ -65,5 +65,8 @@ By pressing the Reset Your Password -button, you can change your old password in
 <p>This is the Mircosoft Azure -version of Overwatch Team Rater, so after you've downloaded every file in your computer, you have to change the connection strings to match your database environment. For instructions in this, check <a href="https://www.w3schools.com/php/php_mysql_connect.asp">PHP Connect to MySQL</a> -tutorial.
   
 I'd recommend using <a href="https://www.apachefriends.org/download.html">XAMPP</a> for hosting this site locally. After you've downloaded Overwatch Team Rater folder, put it into xampp > htdocs. Then, after you've created a database to be used with the tables, create the tables mentioned in <a href="https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/create_table_scripts">create_table_scripts</a>-document using phpmyadmin (localhost/phpmyadmin).
+
+An example of the file path to overwatch-team-rater:
+![File path](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_file_path.PNG)
   
 After these steps, you should be good to go!</p>
