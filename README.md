@@ -26,7 +26,7 @@ Hope you can create good team compositions with Overwatch Team Rater!</p>
 
 <h3>Re-rating saved teams</h3>
 
-<p>You can rate saved teams again by going to <span style="color:orange;">Saved Teams</span> -page. There, scroll to the right of the table and press the <span style="color:orange;">Rate Team</span -button to send the team from the corresponding row to the rating page.
+<p>You can rate saved teams again by going to <span style="color:orange;">Saved Teams</span> -page. There, scroll to the right of the table and press the <span style="color:orange;">Rate Team</span> -button to send the team from the corresponding row to the rating page.
 
 ![Saved teams](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_saved_teams.PNG)
 
