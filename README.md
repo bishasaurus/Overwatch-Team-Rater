@@ -56,7 +56,7 @@ After you've logged in, you can change password and log out in the *Account name
 
 ![Account page](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_login.PNG)
 
-By pressing the Reset Your Password -button, you can change your old password into a new one. Just fill in the new password twice into the input fields and press Submit.</p>
+By pressing the Reset Your Password -button, you can change your old password into a new one. Just fill in the new password twice into the input fields and press Submit. You have to login again after changing password, so keep that in mind.</p>
 
 ![Password reset page](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_reset.PNG)
 
