@@ -3,7 +3,7 @@ Rate your Overwatch teams with this handy web app!
 
 ![Home page view](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_home.PNG)
 
-<h2>Overview and Key Functions</h2>
+<h2>Overview and key functions</h2>
 
 <p>This is a Overwatch fan site, where you can rate your team's competence. The app takes the team's damaging, healing, tanking and other attributes into account, and gives a review of its potential. You can then save your reviewed teams, and see their and other saved teams' rating again from the Saved teams -page. You can delete saved teams from Manage teams -page. You can also create an account in the Sign up -page, and login afterwards via Login & Account -page, so that your account's name will be visible with the teams you've created. 
 
@@ -26,11 +26,27 @@ Hope you can create good team compositions with Overwatch Team Rater!</p>
 
 <h3>Re-rating saved teams</h3>
 
-<p>You can rate saved teams again by going to <span style="color:orange;">Saved Teams</span> -page. There, scroll to the right of the table and press the <span style="color:orange;">Rate Team</span> -button to send the team from the corresponding row to the rating page.
+<p>You can rate saved teams again by going to <span style="color:orange;">Saved Teams</span> -page. There, scroll to the right of the table and press the <span style="color:orange;">Rate Team</span> -button to send the team from the corresponding row to the rating page.</p>
 
 ![Saved teams](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_saved_teams.PNG)
 
+<h3>Deleting teams</h3>
 
+<p>Table for saved teams can store up to 30 teams into itself. If the table runs out of free space, you can head to Manage Teams -page and delete some teams there.
+  
+To delete teams, type the deletable rows' numbers into the input field below the table. If you want to delete many rows at the same time, separate the values with commas. For example, if you want to delete rows numbered 12, 14 and 89, type "12,14,89" into the input field. After you've given the rows to delete, send the input with Enter or pressing Send Input! -button below.</p>
+
+![Manage teams](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_delete.PNG)
+
+<h3>Register an account and login</h3>
+
+<p>You can create an account for the site. Your username will be displayed with the teams saved to the table (column reserved for username will be left blank if you haven't logged in when saving team).
+  
+To register, go to Sign up -page, enter the username and password of your wish, and press Submit.
+
+![Sign up page](https://github.com/bishasaurus/Overwatch-Team-Rater/blob/master/screenshots/owtr_register.PNG)
+
+You might get errors when creating a user, if your username is already taken or the password is too short, Come up with a new username and/or create a longer password, and try again.</p>
 
 <h2>Deployment instructions</h2>
 
