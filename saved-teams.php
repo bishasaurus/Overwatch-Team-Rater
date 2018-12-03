@@ -108,7 +108,7 @@ session_start();
 			die("Connection failed: " . $conn->connect_error);
 			}
 			
-			
+			$link = mysqli_connect("127.0.0.1:51099", "azure", "6#vWHD_$", "localdb");
 			
 			//Prepare a select statement, and query to the database table
 			$sql = "SELECT * FROM myteamsX LIMIT 30"; 
@@ -124,10 +124,15 @@ session_start();
 				$tablerowid++;
 				} 
 			} else {
-				echo "0 results";
+				echo "0 results, try saving a team via Rating-page!";
 }
 
 			echo ""; 
+			
+			//checks if retrieving data was succesful; if not, give proper error message
+			if(mysqli_query($link, $sql) == false){
+					echo ("Error reading the table, please try again later." . mysqli_error($link));
+					}
 
 			$conn->close();
 			
@@ -164,5 +169,3 @@ session_start();
 </div>
 </body>
 </html>
-
-
