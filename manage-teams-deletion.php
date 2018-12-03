@@ -91,7 +91,6 @@ session_start();
 			
 			<?php 
 
-		
 			function team_delete() {
 
 
@@ -132,8 +131,7 @@ session_start();
 				if(mysqli_query($link, $sql)){
 					echo ("Teams deleted succesfully.");
 				} else{
-					debug_to_console( "ERROR: Could not able to execute $sql. " ); 
-					echo ("Error deleting team. Please input the deletable row numbers with commas, for example: 15,31,64") . mysqli_error($link));
+					echo ("Error deleting team. Please input the deletable row numbers with commas, for example: 15,31,64" . mysqli_error($link));
 					}	
 			}
 			
