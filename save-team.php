@@ -83,16 +83,6 @@ session_start();
 			<div>
 			<?php 
 
-			//Function sends debug data do the browser's console
-			
-				function debug_to_console( $data ) {
-					if ( is_array( $data ) )
-					$output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
-					else
-					$output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
-					echo $output;
-				}
-
 				//function to save the team to database table
 				function team_save() {
 
@@ -139,7 +129,7 @@ session_start();
 				
 
 				//Prepare a select statement, and query to the database table
-				$sql = "SELECT * FROM myteams";
+				$sql = "SELECT * FROM myteamsX";
 				$result = $conn->query($sql);	
 				
 				//check if the database is "full", as in has 30 rows of data; if it is, informs the user to delete some teams to make room
@@ -154,11 +144,9 @@ session_start();
 				
 				//checks and reports if team save was succesfull or not
 				if(mysqli_query($link, $sql)){
-					debug_to_console( "Records added successfully." );
 					echo ("Team saved successfully.");
 				} else{
-					debug_to_console( "ERROR: Could not able to execute $sql. " . mysqli_error($link) ); 
-					echo ("Error saving team, please try again later.");
+					echo ("Error saving team, please try again later." . mysqli_error($link));
 					}	
 				}
 				
