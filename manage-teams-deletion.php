@@ -91,18 +91,6 @@ session_start();
 			
 			<?php 
 
-			//Function sends debug data do the browser's console
-				function debug_to_console( $data ) {
-					if ( is_array( $data ) )
-					$output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
-					else
-					$output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
-					echo $output;
-				}
-
-
-				
-		
 		
 			function team_delete() {
 
@@ -142,11 +130,10 @@ session_start();
 				
 				//tries to delete teams declared in manage-teams.php from myteams-table, and reports whether the process was succesful or not
 				if(mysqli_query($link, $sql)){
-					debug_to_console( "Teams deleted succesfully." );
 					echo ("Teams deleted succesfully.");
 				} else{
-					debug_to_console( "ERROR: Could not able to execute $sql. " . mysqli_error($link) ); 
-					echo ("Error deleting team. Please input the deletable row numbers with commas, for example: 15,31,64");
+					debug_to_console( "ERROR: Could not able to execute $sql. " ); 
+					echo ("Error deleting team. Please input the deletable row numbers with commas, for example: 15,31,64") . mysqli_error($link));
 					}	
 			}
 			
