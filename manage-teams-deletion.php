@@ -109,7 +109,7 @@ session_start();
 
 				// get the values entered into manage-teams.php's input field, and sanitize if before using the value for following functions
 				$preDeleteRows = $_POST['deletableRows'];
-				$deleteRows = filter_var($preDeleteRows, FILTER_SANITIZE_URL);
+				$deleteRows = filter_var($preDeleteRows, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_THOUSAND);
 				
 					
 			
