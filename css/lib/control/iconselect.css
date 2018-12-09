@@ -8,11 +8,6 @@ and open the template in the editor.
     Author     : bugraozden
 */
 
-@font-face {
-    font-family: owFont;	
-	src: url("BigNoodleTitling.woff") format("woff");
-}
-
 .icon-select{
     width:0px;
  }
