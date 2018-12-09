@@ -17,3 +17,11 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+
+
+//Test data insert into myteamsX
+INSERT INTO myteamsX (heroName1, heroName2, heroName3, heroName4, heroName5, heroName6, creator) VALUES 
+('Ana', 'Reinhardt', 'Torbjorn', 'Genji', 'Mercy', 'Hanzo'); 
+
+//Test data insert into users
+INSERT INTO users (username, password) VALUES ('kissa', 'koira69');
